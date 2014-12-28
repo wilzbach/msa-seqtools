@@ -9,24 +9,28 @@
 Install the module with: `npm install biojs-utils-seqtools`
 
 ```javascript
-var seqtools = require('biojs-utils-seqtools');
-seqtools.hello("biojs"); // "hello biojs"
+var st = require('biojs-utils-seqtools');
 ```
 
 ## Documentation
 
-#### .hello(name)
+### st.getMeta(label)
 
-**Parameter**: `name`
-**Type**: `String`
-**Example**: `biojs`
+``
+st.getMeta("sp|abc|def") // ["def", {sp: "abc"}]
+``
 
-The 'hello' method is responsible for showing a name.
+### st.contains(text,search)
 
-How to use this method
+```
+st.contains("ABC", 2) // false
+st.contains("ABC","C") // true
+```
 
-```javascript
-seqtools.hello('biojs'); // "hello biojs"
+### st.splitNChars(text,n)
+
+```
+st.splitNChars("ABC", 2) // ["AB", "C"]
 ```
 
 ## Contributing

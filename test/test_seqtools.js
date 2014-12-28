@@ -11,23 +11,28 @@ var chai = require('chai');
 
 // @see http://chaijs.com/api/assert/
 var assert = chai.assert;
-
-// register alternative styles
-// @see http://chaijs.com/api/bdd/
-chai.expect();
-chai.should();
+var equal = assert.deepEqual;
 
 // requires your main app (specified in index.js)
-var biojsutilsseqtools = require('../');
+var st = require('../');
 
 describe('biojs-utils-seqtools module', function(){
-  describe('#hello()', function(){
-    it('should return a hello', function(){
-
-      assert.equal(biojsutilsseqtools.hello('biojs'), ("hello biojs"));
-      
-      // alternative styles
-      biojsutilsseqtools.hello('biojs').should.equal("hello biojs");
+  describe('#getMeta()', function(){
+    it('should split correctly', function(){
+      equal(st.getMeta("sp|abc|def"),["def", {sp: "abc"}]);
+    });
+  });
+  describe('#contains()', function(){
+    it('should find text', function(){
+      assert.ok(st.contains("abc", "a"));
+    });
+    it('should not find non-existing text', function(){
+      assert.notOk(st.contains("abc", "e"));
+    });
+  });
+  describe('#splitNChars()', function(){
+    it('should split correctly', function(){
+      equal(st.splitNChars("abc", 2),["ab", "c"]);
     });
   });
 });
