@@ -17,7 +17,7 @@ var st = require('biojs-utils-seqtools');
 ### st.getMeta(label)
 
 ``
-st.getMeta("sp|abc|def") // ["def", {sp: "abc"}]
+st.getMeta("sp|abc|def") // {name: "def", ids: {sp: "abc"}}
 ``
 
 ### st.contains(text,search)

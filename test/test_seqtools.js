@@ -19,23 +19,30 @@ var st = require('../');
 describe('biojs-utils-seqtools module', function() {
   describe('#getMeta()', function() {
     it('should split correctly', function() {
-      equal(st.getMeta("sp|abc|def"), ["def", {
-        sp: "abc"
-      }]);
+      equal(st.getMeta("sp|abc|def"), {
+        name: "def",
+        ids: {
+          sp: "abc"
+        },
+      });
     });
     it('should should recognize uniprot', function() {
-      equal(st.getMeta("sp|abc|def a long description OS=organism GN=genename"), ["a long description", {
-        sp: "abc"
-      }, {
-        os: "organism",
-        gn: "genename",
-        en: "def"
-      }]);
+      equal(st.getMeta("sp|abc|def a long description OS=organism GN=genename"), {
+        name: "a long description",
+        ids: {
+          sp: "abc"
+        },
+        details: {
+          os: "organism",
+          gn: "genename",
+          en: "def"
+        }
+      });
     });
   });
   describe('#buildLinks()', function() {
     it('should show correct links', function() {
-      equal(st.buildLinks(st.getMeta("sp|abc|def")[1]), {
+      equal(st.buildLinks(st.getMeta("sp|abc|def").ids), {
         "Uniprot": "http://www.uniprot.org/abc"
       });
     });
