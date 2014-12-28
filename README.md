@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/biojs-utils-seqtools.svg)](https://www.npmjs.org/package/biojs-utils-seqtools) 
 [![Build Status](https://secure.travis-ci.org/greenify/biojs-utils-seqtools.png?branch=master)](http://travis-ci.org/greenify/biojs-utils-seqtools) 
 
-> Convient tools to work with seqs
+> Convience tools to work with seqs
 
 ## Getting Started
 Install the module with: `npm install biojs-utils-seqtools`
