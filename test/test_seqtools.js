@@ -1,6 +1,6 @@
 /*
- * biojs-utils-seqtools
- * https://github.com/greenify/biojs-utils-seqtools
+ * msa-seqtools
+ * https://github.com/greenify/msa-seqtools
  *
  * Copyright (c) 2014 greenify
  * Licensed under the MIT license.
@@ -16,7 +16,7 @@ var equal = assert.deepEqual;
 // requires your main app (specified in index.js)
 var st = require('../');
 
-describe('biojs-utils-seqtools module', function() {
+describe('msa-seqtools module', function() {
   describe('#getMeta()', function() {
     it('should split correctly', function() {
       equal(st.getMeta("sp|abc|def"), {

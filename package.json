@@ -1,29 +1,29 @@
 {
-  "name": "biojs-utils-seqtools",
+  "name": "msa-seqtools",
   "description": "Convient tools to work with seqs",
   "version": "0.1.6",
-  "homepage": "https://github.com/greenify/biojs-utils-seqtools",
+  "homepage": "https://github.com/greenify/msa-seqtools",
   "author": {
     "name": "greenify",
     "email": "greeenify@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/greenify/biojs-utils-seqtools.git"
+    "url": "git://github.com/greenify/msa-seqtools.git"
   },
   "bugs": {
-    "url": "https://github.com/greenify/biojs-utils-seqtools/issues"
+    "url": "https://github.com/greenify/msa-seqtools/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/greenify/biojs-utils-seqtools/blob/master/LICENSE"
+      "url": "https://github.com/greenify/msa-seqtools/blob/master/LICENSE"
     }
   ],
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
-    "build": "mkdirp build && browserify -r ./:biojs-utils-seqtools -o build/seqtools.js",
+    "build": "mkdirp build && browserify -r ./:msa-seqtools -o build/seqtools.js",
     "build-browser": "npm run build",
     "prepublish": "npm run build"
   },
@@ -37,6 +37,7 @@
   "keywords": [
     "seqs",
     "sequence",
+    "seqtools",
     "biojs"
   ]
 }
