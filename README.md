@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/msa-seqtools.svg)](https://www.npmjs.org/package/msa-seqtools) 
 [![Build Status](https://secure.travis-ci.org/greenify/msa-seqtools.png?branch=master)](http://travis-ci.org/greenify/msa-seqtools) 
 
-> Convience tools to work with seqs
+> Convenience tools to work with seqs
 
 ## Getting Started
 Install the module with: `npm install msa-seqtools`
@@ -45,7 +45,7 @@ If you have any problem or suggestion please open an issue [here](https://github
 
 The MIT License
 
-Copyright (c) 2014, greenify
+Copyright (c) 2015, greenify
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
