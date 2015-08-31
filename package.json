@@ -1,7 +1,7 @@
 {
   "name": "msa-seqtools",
   "description": "Convience tools to work with seqs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "https://github.com/greenify/msa-seqtools",
   "author": {
     "name": "greenify",
