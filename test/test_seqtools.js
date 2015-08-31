@@ -60,4 +60,19 @@ describe('msa-seqtools module', function() {
       equal(st.splitNChars("abc", 2), ["ab", "c"]);
     });
   });
+  describe('#complement()', function() {
+    it('should complement sequence correctly', function() {
+      equal(st.complement('actgACTG'), 'tgacTGAC')
+    })
+  });
+  describe('#reverse()', function() {
+    it('should reverse a sequence', function() {
+      equal(st.reverse('actgACTG'), 'GTCAgtca')
+    })
+  });
+  describe('#reverseComplement()', function() {
+    it('should reverse a sequence', function() {
+      equal(st.reverseComplement('actgACTG'), 'CAGTcagt')
+    })
+  });
 });
