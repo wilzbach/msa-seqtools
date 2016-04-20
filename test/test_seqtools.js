@@ -24,17 +24,37 @@ describe('msa-seqtools module', function() {
         ids: {
           sp: "abc"
         },
+        details: {
+          en: "def"
+        }
       });
     });
-    it('should should recognize uniprot', function() {
+    it('should should recognize key=value', function() {
       equal(st.getMeta("sp|abc|def a long description OS=organism GN=genename"), {
-        name: "a long description",
+        name: "def",
         ids: {
           sp: "abc"
         },
         details: {
           os: "organism",
           gn: "genename",
+          en: "def"
+        },
+        desc: "a long description"
+      });
+    });
+    it('should deal with spaces in key=value', function() {
+      equal(st.getMeta("sp|abc|def Carotenoid cleavage dioxygenase 8, chloroplastic OS=Arabidopsis thaliana GN=CCD8 PE=1 SV=1 "), {
+        name: "def",
+        desc: "Carotenoid cleavage dioxygenase 8, chloroplastic",
+        ids: {
+          sp: "abc"
+        },
+        details: {
+          os: "Arabidopsis thaliana",
+          gn: "CCD8",
+          pe: "1",
+          sv: "1",
           en: "def"
         }
       });
