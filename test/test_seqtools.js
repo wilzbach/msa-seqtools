@@ -59,6 +59,19 @@ describe('msa-seqtools module', function() {
         }
       });
     });
+    it('correctly parse descriptions without key=value', function() {
+      equal(st.getMeta("sp|abc|def a long description with no key values"), {
+        name: "def",
+        ids: {
+          sp: "abc"
+        },
+        details: {
+          en: "def"
+        },
+        desc: "a long description with no key values"
+      });
+    });
+	
   });
   describe('#buildLinks()', function() {
     it('should show correct links', function() {
