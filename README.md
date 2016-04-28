@@ -1,7 +1,7 @@
 # msa-seqtools
 
 [![NPM version](http://img.shields.io/npm/v/msa-seqtools.svg)](https://www.npmjs.org/package/msa-seqtools) 
-[![Build Status](https://secure.travis-ci.org/greenify/msa-seqtools.png?branch=master)](http://travis-ci.org/greenify/msa-seqtools) 
+[![Build Status](https://secure.travis-ci.org/wilzbach/msa-seqtools.png?branch=master)](http://travis-ci.org/wilzbach/msa-seqtools) 
 
 > Convenience tools to work with seqs
 
